@@ -3,7 +3,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { signIn } from "next-auth/react";
 import { Button } from "@/components/ui/button";
 import {Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
@@ -64,7 +63,7 @@ export function SiteHeader() {
           <Button
             variant="ghost"
             className="rounded-full text-[13px] font-medium tracking-wide text-foreground hover:border-primary"
-            onClick={() => signIn("cognito")}
+          
           >
             Log in
           </Button>
@@ -110,7 +109,7 @@ export function SiteHeader() {
               className="justify-center rounded-full text-foreground hover:border-primary"
               onClick={() => {
                 setMobileOpen(false);
-                signIn("cognito");
+                
               }}
             >
               Log in
